@@ -29,6 +29,7 @@ export const getShops = async () => {
   }
 };
 
+// 匿名ログイン
 export const signin = async () => {
   const userCredintial = await firebase.auth().signInAnonymously();
   const { uid } = userCredintial.user;
