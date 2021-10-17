@@ -1,4 +1,4 @@
-import * as firebase from "firebase/app";
+import firebase from "firebase/app";
 import "firebase/firestore";
 import "firebase/auth";
 import Constants from "expo-constants";
@@ -7,6 +7,7 @@ import { Shop } from "../types/shop";
 import { initialUser, User } from "../types/user";
 import { Review } from "../types/review";
 
+//★初期化していなければ初期化する。初期化されているにもかかわらず初期化することを防ぐ
 if (!firebase.apps.length) {
   firebase.initializeApp(Constants.manifest.extra.firebase);
 }
