@@ -9,6 +9,7 @@ import { UserContext } from "../contexts/userContext";
 
 export const AppNavigator = () => {
   const { user } = useContext(UserContext);
+  console.log("AppNavigator!!");
 
   return (
     <NavigationContainer>

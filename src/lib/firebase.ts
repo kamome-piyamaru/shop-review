@@ -17,7 +17,7 @@ export const getShops = async () => {
     const snapshot = await firebase
       .firestore()
       .collection("shops")
-      .orderBy("score", "desc")
+      //      .orderBy("score", "desc")
       .get();
     const shops = snapshot.docs.map(
       (doc) => ({ ...doc.data(), id: doc.id } as Shop)
